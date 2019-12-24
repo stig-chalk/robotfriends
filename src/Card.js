@@ -12,4 +12,16 @@ const Card = ({id, name, email}) => {
     );
 }
 
-export default Card;
+const CardList = ({robots}) => {
+    return (
+        <div>
+        {
+            robots.map((bot, i) => {
+                return (<Card key = {i} id = {bot.id} name = {bot.name} email = {bot.email}/>)
+            })
+        }
+        </div>
+    )
+}
+
+export default CardList;
